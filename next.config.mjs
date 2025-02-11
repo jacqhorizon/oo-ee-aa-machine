@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/oo-ee-aa-machine',
     output: 'export',
+    images: {unoptimized: true},
     reactStrictMode: true
 };
 

@@ -3,11 +3,11 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 export default function CatComponent() {
-  const [imageName, setImageName] = useState('/cat-still.gif')
+  const [imageName, setImageName] = useState('./cat-still.gif')
 
   const spin = () => {
-    setImageName('/cat-moving.gif')
-    setTimeout(() => setImageName('/cat-still.gif'), 1500)
+    setImageName('./cat-moving.gif')
+    setTimeout(() => setImageName('./cat-still.gif'), 1500)
   }
 
   return (
