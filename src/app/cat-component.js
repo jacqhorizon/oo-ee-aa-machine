@@ -6,7 +6,7 @@ export default function CatComponent() {
   const [imageName, setImageName] = useState('./cat-still.gif')
 
   const spin = (sound) => {
-    const audio = new Audio(`/sounds/${sound}1.m4a`)
+    const audio = new Audio(`./${sound}1.m4a`)
     audio.play()
     setImageName('./cat-moving.gif')
     setTimeout(() => setImageName('./cat-still.gif'), 500)
