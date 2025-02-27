@@ -1,17 +1,8 @@
 'use client'
 import Image from 'next/image'
-import { useState } from 'react'
 
-export default function CatComponent() {
-  const [imageName, setImageName] = useState('./cat-still.gif')
 
-  const spin = (sound) => {
-    const audio = new Audio(`./${sound}1.m4a`)
-    audio.play()
-    setImageName('./cat-moving.gif')
-    setTimeout(() => setImageName('./cat-still.gif'), 500)
-  }
-
+export default function CatComponent({imageName, spin}) {
   return (
     <div className='flex flex-col items-center'>
       <Image src={imageName} width='300' height='300' alt='cat' />
@@ -33,7 +24,7 @@ export default function CatComponent() {
         <button
           onClick={() => spin('aa')}
           type='button'
-          className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          className='text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'
         >
           AA
         </button>
